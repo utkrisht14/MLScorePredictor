@@ -1,0 +1,42 @@
+[project]
+name = "mlscorepredictor"
+version = "0.1.0"
+description = "Hybrid ML, probabilistic scoreline, and RAG system for FIFA World Cup 2026 group-stage predictions."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "streamlit>=1.37.0",
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "scikit-learn>=1.5.0",
+    "pydantic>=2.8.0",
+    "python-dotenv>=1.0.1",
+    "openai>=1.40.0",
+    "pinecone>=5.0.0",
+    "requests>=2.32.0",
+    "beautifulsoup4>=4.12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "ruff>=0.6.0",
+]
+
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["mlscorepredictor*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".venv", ".uv-cache", ".uv-python"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

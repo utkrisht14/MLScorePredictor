@@ -1,0 +1,41 @@
+date,tournament,team_a,team_b,team_a_goals,team_b_goals,neutral_venue
+2022-11-20,FIFA World Cup,Qatar,Ecuador,0,2,false
+2022-11-21,FIFA World Cup,England,Iran,6,2,true
+2022-11-21,FIFA World Cup,Senegal,Netherlands,0,2,true
+2022-11-22,FIFA World Cup,Argentina,Saudi Arabia,1,2,true
+2022-11-22,FIFA World Cup,France,Australia,4,1,true
+2022-11-23,FIFA World Cup,Morocco,Croatia,0,0,true
+2022-11-24,FIFA World Cup,Portugal,Ghana,3,2,true
+2022-11-24,FIFA World Cup,Brazil,Serbia,2,0,true
+2022-11-25,FIFA World Cup,Qatar,Senegal,1,3,false
+2022-11-26,FIFA World Cup,France,Denmark,2,1,true
+2022-11-28,FIFA World Cup,South Korea,Ghana,2,3,true
+2022-11-28,FIFA World Cup,Brazil,Switzerland,1,0,true
+2022-11-28,FIFA World Cup,Portugal,Uruguay,2,0,true
+2022-11-29,FIFA World Cup,Ecuador,Senegal,1,2,true
+2022-11-30,FIFA World Cup,Australia,Denmark,1,0,true
+2022-11-30,FIFA World Cup,Poland,Argentina,0,2,true
+2022-12-01,FIFA World Cup,Croatia,Belgium,0,0,true
+2022-12-02,FIFA World Cup,South Korea,Portugal,2,1,true
+2022-12-02,FIFA World Cup,Cameroon,Brazil,1,0,true
+2022-12-06,FIFA World Cup,Morocco,Spain,0,0,true
+2022-12-09,FIFA World Cup,Croatia,Brazil,1,1,true
+2022-12-10,FIFA World Cup,Morocco,Portugal,1,0,true
+2022-12-14,FIFA World Cup,France,Morocco,2,0,true
+2022-12-18,FIFA World Cup,Argentina,France,3,3,true
+2024-03-23,Friendly,France,Germany,0,2,false
+2024-03-26,Friendly,France,Chile,3,2,false
+2024-06-05,Friendly,France,Luxembourg,3,0,false
+2024-06-08,Friendly,Portugal,Croatia,1,2,false
+2024-06-18,UEFA Euro,Portugal,Czechia,2,1,true
+2024-06-25,UEFA Euro,France,Poland,1,1,true
+2024-07-06,Copa America,Colombia,Panama,5,0,true
+2024-07-10,Copa America,Uruguay,Colombia,0,1,true
+2024-09-06,AFCON Qualifier,Senegal,Burkina Faso,1,1,false
+2024-09-10,AFCON Qualifier,Burundi,Senegal,0,1,true
+2024-10-10,World Cup Qualifier,Uzbekistan,Iran,0,0,false
+2024-10-15,World Cup Qualifier,Uzbekistan,United Arab Emirates,1,0,false
+2024-11-14,World Cup Qualifier,Iraq,Jordan,0,0,false
+2024-11-19,World Cup Qualifier,Oman,Iraq,0,1,true
+2025-06-06,World Cup Qualifier,Norway,Italy,3,0,false
+2025-06-10,World Cup Qualifier,Estonia,Norway,0,1,true

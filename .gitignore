@@ -1,0 +1,14 @@
+.env
+.idea/
+.logs/
+.venv/
+.uv-cache/
+.uv-python/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+data/raw/
+data/processed/
+*.sqlite

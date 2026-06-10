@@ -1,0 +1,17 @@
+fixture_id,group,match_date,team_a,team_b,stadium,city,country,neutral_venue
+I-1,I,2026-06-16,France,Senegal,MetLife Stadium,East Rutherford,USA,true
+I-2,I,2026-06-16,Iraq,Norway,Foxborough Stadium,Foxborough,USA,true
+I-3,I,2026-06-21,France,Iraq,Lincoln Financial Field,Philadelphia,USA,true
+I-4,I,2026-06-21,Senegal,Norway,BMO Field,Toronto,Canada,true
+I-5,I,2026-06-26,Norway,France,Hard Rock Stadium,Miami,USA,true
+I-6,I,2026-06-26,Senegal,Iraq,Mercedes-Benz Stadium,Atlanta,USA,true
+K-1,K,2026-06-17,Portugal,DR Congo,NRG Stadium,Houston,USA,true
+K-2,K,2026-06-17,Uzbekistan,Colombia,AT&T Stadium,Arlington,USA,true
+K-3,K,2026-06-22,Portugal,Uzbekistan,Levi's Stadium,Santa Clara,USA,true
+K-4,K,2026-06-22,DR Congo,Colombia,Lumen Field,Seattle,USA,true
+K-5,K,2026-06-27,Colombia,Portugal,BC Place,Vancouver,Canada,true
+K-6,K,2026-06-27,DR Congo,Uzbekistan,SoFi Stadium,Inglewood,USA,true
+A-1,A,2026-06-11,Mexico,South Africa,Estadio Azteca,Mexico City,Mexico,false
+A-2,A,2026-06-12,South Korea,Czechia,Guadalajara Stadium,Guadalajara,Mexico,true
+C-1,C,2026-06-14,Brazil,Scotland,Hard Rock Stadium,Miami,USA,true
+C-2,C,2026-06-14,Morocco,Haiti,Gillette Stadium,Foxborough,USA,true

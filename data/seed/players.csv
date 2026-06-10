@@ -1,0 +1,19 @@
+player_name,team,position,overall,pace,shooting,passing,dribbling,defending,physical,gk,minutes_projection,is_key_player
+Kylian Mbappe,France,FW,91,97,90,82,92,37,78,0,90,true
+Ousmane Dembele,France,FW,88,93,84,84,89,36,64,0,80,true
+Aurelien Tchouameni,France,MF,85,70,70,81,80,84,84,0,85,true
+Mike Maignan,France,GK,87,0,0,0,0,0,0,87,90,true
+Sadio Mane,Senegal,FW,84,84,82,78,85,45,72,0,90,true
+Nicolas Jackson,Senegal,FW,81,83,80,72,79,38,74,0,75,true
+Kalidou Koulibaly,Senegal,DF,83,70,34,65,62,84,84,0,90,true
+Edouard Mendy,Senegal,GK,82,0,0,0,0,0,0,82,90,true
+Erling Haaland,Norway,FW,91,88,93,70,80,45,88,0,90,true
+Martin Odegaard,Norway,MF,89,72,82,90,88,63,67,0,90,true
+Aymen Hussein,Iraq,FW,74,69,76,62,68,34,79,0,90,true
+Jalal Hassan,Iraq,GK,70,0,0,0,0,0,0,70,90,true
+Cristiano Ronaldo,Portugal,FW,86,77,88,76,82,34,75,0,70,true
+Bruno Fernandes,Portugal,MF,88,70,86,90,84,70,77,0,90,true
+Diogo Costa,Portugal,GK,84,0,0,0,0,0,0,84,90,true
+Luis Diaz,Colombia,FW,86,90,82,78,88,45,72,0,90,true
+James Rodriguez,Colombia,MF,82,55,82,88,83,50,62,0,70,true
+David Ospina,Colombia,GK,78,0,0,0,0,0,0,78,90,true
