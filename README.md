@@ -15,6 +15,9 @@ The RAG layer then explains the prediction using match context from Pinecone and
 
 - FastAPI backend with `/predict`, `/teams`, `/fixtures`, and `/health`.
 - Streamlit frontend for selecting fixtures and running scenario analysis.
+- Group-stage simulator with Monte Carlo qualification probabilities.
+- Fixture prediction table with CSV export.
+- Demo backtesting metrics on the included historical seed data.
 - Seed real-world-style data tables for fixtures, rankings, players, historical results,
   recent team form, selected players, and RAG documents.
 - ML expected-goals model with a robust fallback if the training sample is small.
@@ -75,6 +78,7 @@ Use `docs/data_sources.md` as the checklist for what should come from the outsid
 - 72 World Cup 2026 group-stage fixtures.
 - 48 team ranking/form profiles.
 - 144 selected player profiles, three per team.
+- What-if comparison, player impact table, feature comparison, and probability charts.
 
 The selected-player table uses EAFC-style attribute columns. It is intentionally marked as
 curated seed data, not an official complete EA database export. If you obtain a legal EAFC CSV,
