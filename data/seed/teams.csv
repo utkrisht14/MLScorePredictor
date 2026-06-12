@@ -1,17 +1,49 @@
 team,fifa_rank,elo_rating,confederation,host_advantage
+Spain,1,2102,UEFA,0
+Argentina,2,2090,CONMEBOL,0
 France,3,2078,UEFA,0
-Senegal,19,1825,CAF,0
-Norway,29,1784,UEFA,0
-Iraq,58,1610,AFC,0
-Portugal,6,1998,UEFA,0
-Colombia,13,1908,CONMEBOL,0
-Uzbekistan,50,1658,AFC,0
-DR Congo,56,1628,CAF,0
-Mexico,15,1842,CONCACAF,1
-South Africa,61,1588,CAF,0
-South Korea,22,1810,AFC,0
-Czechia,44,1712,UEFA,0
+England,4,2062,UEFA,0
 Brazil,5,2035,CONMEBOL,0
-Morocco,12,1916,CAF,0
-Scotland,35,1745,UEFA,0
-Haiti,86,1435,CONCACAF,0
+Portugal,6,1998,UEFA,0
+Netherlands,7,1988,UEFA,0
+Belgium,8,1968,UEFA,0
+Germany,9,1958,UEFA,0
+Croatia,10,1936,UEFA,0
+Morocco,11,1916,CAF,0
+Colombia,13,1908,CONMEBOL,0
+United States,14,1866,CONCACAF,1
+Mexico,15,1842,CONCACAF,1
+Uruguay,16,1878,CONMEBOL,0
+Switzerland,17,1838,UEFA,0
+Japan,18,1832,AFC,0
+Senegal,19,1825,CAF,0
+Iran,20,1818,AFC,0
+South Korea,22,1810,AFC,0
+Ecuador,23,1804,CONMEBOL,0
+Austria,24,1798,UEFA,0
+Turkey,25,1792,UEFA,0
+Australia,26,1788,AFC,0
+Canada,27,1786,CONCACAF,1
+Norway,29,1784,UEFA,0
+Panama,30,1768,CONCACAF,0
+Egypt,34,1752,CAF,0
+Scotland,36,1745,UEFA,0
+Paraguay,39,1732,CONMEBOL,0
+Tunisia,40,1728,CAF,0
+Ivory Coast,42,1720,CAF,0
+Sweden,43,1716,UEFA,0
+Czechia,44,1712,UEFA,0
+Uzbekistan,50,1658,AFC,0
+Qatar,51,1648,AFC,0
+DR Congo,56,1628,CAF,0
+Iraq,58,1610,AFC,0
+Saudi Arabia,60,1600,AFC,0
+South Africa,61,1588,CAF,0
+Jordan,66,1548,AFC,0
+Cape Verde,68,1538,CAF,0
+Bosnia and Herzegovina,71,1524,UEFA,0
+Ghana,72,1520,CAF,0
+Curacao,82,1460,CONCACAF,0
+Haiti,84,1435,CONCACAF,0
+New Zealand,86,1428,OFC,0
+Algeria,35,1748,CAF,0
