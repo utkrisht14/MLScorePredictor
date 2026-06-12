@@ -29,5 +29,8 @@ class DataCatalog:
     def players(self) -> pd.DataFrame:
         return self.read_csv("players.csv")
 
+    def recent_team_form(self) -> pd.DataFrame:
+        return self.read_csv("recent_team_form.csv")
+
     def rag_documents(self) -> pd.DataFrame:
         return self.read_csv("rag_documents.csv")

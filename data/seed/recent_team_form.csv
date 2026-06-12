@@ -1,0 +1,49 @@
+team,last_5_w,last_5_d,last_5_l,goals_for_5,goals_against_5,last_10_w,last_10_d,last_10_l,goals_for_10,goals_against_10,clean_sheets_10,avg_opponent_rank,data_source
+Spain,4,1,0,12,4,8,1,1,24,8,5,32,curated_recent_form_seed
+Argentina,4,1,0,11,3,8,2,0,23,7,6,28,curated_recent_form_seed
+France,4,0,1,10,4,7,2,1,22,9,5,30,curated_recent_form_seed
+England,3,2,0,9,4,7,2,1,20,9,4,29,curated_recent_form_seed
+Brazil,3,1,1,10,5,6,2,2,21,11,4,22,curated_recent_form_seed
+Portugal,4,0,1,13,5,7,1,2,25,10,4,34,curated_recent_form_seed
+Netherlands,3,1,1,11,6,6,2,2,22,12,3,27,curated_recent_form_seed
+Belgium,3,1,1,10,6,6,2,2,21,12,3,35,curated_recent_form_seed
+Germany,3,2,0,12,6,6,3,1,23,13,3,26,curated_recent_form_seed
+Croatia,3,1,1,8,5,6,2,2,17,11,4,25,curated_recent_form_seed
+Morocco,4,1,0,11,3,8,1,1,22,7,6,43,curated_recent_form_seed
+Colombia,3,2,0,9,4,7,2,1,19,8,5,24,curated_recent_form_seed
+United States,3,1,1,10,6,6,2,2,20,12,3,38,curated_recent_form_seed
+Mexico,3,1,1,8,5,6,2,2,18,11,4,41,curated_recent_form_seed
+Uruguay,3,1,1,9,5,6,2,2,19,11,4,20,curated_recent_form_seed
+Switzerland,3,1,1,8,5,5,3,2,16,11,4,31,curated_recent_form_seed
+Japan,4,0,1,13,5,8,1,1,27,9,5,45,curated_recent_form_seed
+Senegal,3,2,0,8,3,7,2,1,17,7,6,47,curated_recent_form_seed
+Iran,4,0,1,12,5,8,1,1,25,10,4,52,curated_recent_form_seed
+South Korea,3,1,1,9,5,6,2,2,20,11,4,45,curated_recent_form_seed
+Ecuador,3,1,1,7,4,5,3,2,15,10,5,21,curated_recent_form_seed
+Austria,3,1,1,10,6,6,2,2,20,13,3,30,curated_recent_form_seed
+Turkey,3,0,2,10,8,5,2,3,20,16,2,33,curated_recent_form_seed
+Australia,3,1,1,8,4,6,3,1,17,8,5,54,curated_recent_form_seed
+Canada,2,2,1,8,7,4,3,3,17,15,2,38,curated_recent_form_seed
+Norway,3,1,1,11,5,6,2,2,22,12,3,40,curated_recent_form_seed
+Panama,3,0,2,8,7,5,2,3,16,15,2,58,curated_recent_form_seed
+Egypt,3,2,0,9,4,7,2,1,18,8,5,50,curated_recent_form_seed
+Scotland,2,2,1,7,6,4,3,3,15,14,3,29,curated_recent_form_seed
+Paraguay,2,2,1,6,5,4,3,3,13,12,4,22,curated_recent_form_seed
+Tunisia,3,1,1,7,4,6,2,2,15,9,5,53,curated_recent_form_seed
+Ivory Coast,3,1,1,9,5,6,2,2,19,11,4,49,curated_recent_form_seed
+Sweden,2,2,1,8,7,4,3,3,17,15,2,28,curated_recent_form_seed
+Czechia,2,1,2,8,8,4,2,4,16,16,2,30,curated_recent_form_seed
+Uzbekistan,3,2,0,8,3,6,3,1,16,7,6,61,curated_recent_form_seed
+Qatar,2,1,2,7,8,4,2,4,15,17,2,57,curated_recent_form_seed
+DR Congo,3,1,1,7,4,6,2,2,15,9,5,55,curated_recent_form_seed
+Iraq,3,2,0,7,3,6,3,1,15,7,6,59,curated_recent_form_seed
+Saudi Arabia,2,2,1,7,6,4,3,3,15,13,3,56,curated_recent_form_seed
+South Africa,3,1,1,8,5,5,3,2,16,11,4,62,curated_recent_form_seed
+Jordan,2,1,2,7,8,4,2,4,15,16,2,66,curated_recent_form_seed
+Cape Verde,3,1,1,7,4,5,3,2,15,10,5,64,curated_recent_form_seed
+Bosnia and Herzegovina,2,1,2,8,9,4,2,4,16,18,2,38,curated_recent_form_seed
+Ghana,2,1,2,8,8,4,2,4,16,16,2,51,curated_recent_form_seed
+Curacao,3,1,1,9,6,5,2,3,18,14,3,75,curated_recent_form_seed
+Haiti,2,1,2,7,8,4,2,4,15,17,2,78,curated_recent_form_seed
+New Zealand,3,1,1,10,5,6,2,2,20,11,4,83,curated_recent_form_seed
+Algeria,3,1,1,9,5,6,2,2,19,11,4,52,curated_recent_form_seed

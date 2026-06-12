@@ -17,12 +17,14 @@ class FootballPredictor:
         self.historical_matches = self.catalog.historical_matches()
         self.teams = self.catalog.teams()
         self.players = self.catalog.players()
+        self.recent_form = self.catalog.recent_team_form()
         self.fixtures = self.catalog.fixtures()
 
         self.feature_builder = TeamFeatureBuilder(
             historical_matches=self.historical_matches,
             teams=self.teams,
             players=self.players,
+            recent_form=self.recent_form,
         )
         self.expected_goals_model = ExpectedGoalsModel(self.feature_builder, self.players)
         self.expected_goals_model.train(self.historical_matches)

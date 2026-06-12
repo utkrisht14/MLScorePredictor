@@ -32,5 +32,7 @@ This project needs two categories of data.
 
 EA FC player ratings can be useful for a student/demo project if you use a legally available
 dataset or manually curated selected-player data. Avoid scraping protected or unauthorized
-sources. The app is designed to accept a simple `players.csv`, so you can add selected players
-without changing the model code.
+sources. The current app uses curated EAFC-style selected-player attributes for all 48 teams.
+If you obtain a legal official or third-party CSV, replace `players.csv` using the same schema:
+`player_name, team, position, overall, pace, shooting, passing, dribbling, defending, physical,
+gk, minutes_projection, is_key_player`.

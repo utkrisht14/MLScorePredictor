@@ -19,6 +19,7 @@ catalog, predictor, rag_service = load_services()
 fixtures = catalog.fixtures()
 teams = sorted(catalog.teams()["team"].tolist())
 players = catalog.players()
+recent_form = catalog.recent_team_form()
 
 st.set_page_config(page_title="World Cup 2026 Score Predictor", layout="wide")
 st.title("World Cup 2026 Score Predictor")
@@ -26,12 +27,20 @@ st.title("World Cup 2026 Score Predictor")
 left, right = st.columns([0.36, 0.64])
 
 with left:
+    st.caption(
+        f"{len(fixtures)} fixtures | {len(teams)} teams | "
+        f"{len(players)} selected players | {len(recent_form)} recent-form profiles"
+    )
+
+    selected_group = st.selectbox("Group", ["All"] + sorted(fixtures["group"].unique().tolist()))
+    visible_fixtures = fixtures if selected_group == "All" else fixtures[fixtures["group"].eq(selected_group)]
+
     fixture_labels = [
         f"{row.fixture_id} | Group {row.group}: {row.team_a} vs {row.team_b}"
-        for row in fixtures.itertuples()
+        for row in visible_fixtures.itertuples()
     ]
     selected_label = st.selectbox("Fixture", fixture_labels)
-    selected_fixture = fixtures.iloc[fixture_labels.index(selected_label)]
+    selected_fixture = visible_fixtures.iloc[fixture_labels.index(selected_label)]
 
     team_a = st.selectbox("Team A", teams, index=teams.index(selected_fixture["team_a"]))
     team_b = st.selectbox("Team B", teams, index=teams.index(selected_fixture["team_b"]))
@@ -44,6 +53,10 @@ with left:
     )
 
     scenario_players = players[players["team"].isin([team_a, team_b])]["player_name"].tolist()
+    st.caption(
+        f"{team_a}/{team_b} selected-player coverage: "
+        f"{len(players[players['team'].isin([team_a, team_b])])} players"
+    )
     player_name = st.selectbox("Player availability change", ["None"] + scenario_players)
     player_status = st.selectbox("Status", ["out", "doubtful", "limited", "starts"])
 

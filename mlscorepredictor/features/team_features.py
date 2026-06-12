@@ -27,10 +27,12 @@ class TeamFeatureBuilder:
         historical_matches: pd.DataFrame,
         teams: pd.DataFrame,
         players: pd.DataFrame,
+        recent_form: pd.DataFrame | None = None,
     ) -> None:
         self.historical_matches = historical_matches.copy()
         self.teams = teams.copy()
         self.players = players.copy()
+        self.recent_form = recent_form.copy() if recent_form is not None else pd.DataFrame()
         self._profiles = self._build_profiles()
 
     def profile(self, team: str) -> TeamProfile:
@@ -71,25 +73,49 @@ class TeamFeatureBuilder:
 
     def _build_profiles(self) -> dict[str, TeamProfile]:
         match_profiles = self._match_profiles()
+        recent_profiles = self._recent_form_profiles()
         squad_profiles = self._squad_profiles()
         profiles: dict[str, TeamProfile] = {}
 
         for row in self.teams.to_dict("records"):
             team = row["team"]
             match_profile = match_profiles.get(team, {})
+            recent_profile = recent_profiles.get(team, {})
             squad_profile = squad_profiles.get(team, {})
             profiles[team] = TeamProfile(
                 team=team,
                 fifa_rank=float(row["fifa_rank"]),
                 elo_rating=float(row["elo_rating"]),
-                attack_strength=float(match_profile.get("attack_strength", 1.0)),
-                defense_strength=float(match_profile.get("defense_strength", 1.0)),
-                recent_goal_diff=float(match_profile.get("recent_goal_diff", 0.0)),
+                attack_strength=float(
+                    recent_profile.get("attack_strength", match_profile.get("attack_strength", 1.0))
+                ),
+                defense_strength=float(
+                    recent_profile.get("defense_strength", match_profile.get("defense_strength", 1.0))
+                ),
+                recent_goal_diff=float(
+                    recent_profile.get("recent_goal_diff", match_profile.get("recent_goal_diff", 0.0))
+                ),
                 squad_attack=float(squad_profile.get("squad_attack", 75.0)),
                 squad_midfield=float(squad_profile.get("squad_midfield", 75.0)),
                 squad_defense=float(squad_profile.get("squad_defense", 75.0)),
                 squad_goalkeeper=float(squad_profile.get("squad_goalkeeper", 75.0)),
             )
+        return profiles
+
+    def _recent_form_profiles(self) -> dict[str, dict[str, float]]:
+        if self.recent_form.empty:
+            return {}
+
+        profiles: dict[str, dict[str, float]] = {}
+        for row in self.recent_form.to_dict("records"):
+            goals_for = max(float(row["goals_for_10"]) / 10.0, 0.1)
+            goals_against = max(float(row["goals_against_10"]) / 10.0, 0.1)
+            profiles[row["team"]] = {
+                "attack_strength": goals_for / 1.35,
+                "defense_strength": goals_against / 1.20,
+                "recent_goal_diff": (float(row["goals_for_10"]) - float(row["goals_against_10"]))
+                / 10.0,
+            }
         return profiles
 
     def _match_profiles(self) -> dict[str, dict[str, float]]:

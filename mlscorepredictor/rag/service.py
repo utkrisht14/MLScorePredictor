@@ -23,6 +23,8 @@ class RagService:
         self.catalog = catalog or DataCatalog()
         self.settings = settings or get_settings()
         self.documents = self.catalog.rag_documents()
+        self.players = self.catalog.players()
+        self.recent_form = self.catalog.recent_team_form()
         self._openai_client = None
         self._pinecone_index = None
 
@@ -41,8 +43,8 @@ class RagService:
         query = self._query_text(request)
         pinecone_docs = self._retrieve_from_pinecone(query, request)
         if pinecone_docs:
-            return pinecone_docs
-        return self._retrieve_from_local_seed(request)
+            return pinecone_docs + self._structured_context(request)
+        return self._retrieve_from_local_seed(request) + self._structured_context(request)
 
     def _retrieve_from_local_seed(self, request: PredictionRequest) -> list[RetrievedDocument]:
         team_a = request.team_a.casefold()
@@ -69,6 +71,36 @@ class RagService:
             )
             for _, row in rows
         ]
+
+    def _structured_context(self, request: PredictionRequest) -> list[RetrievedDocument]:
+        contexts = []
+        for team in [request.team_a, request.team_b]:
+            player_rows = self.players[self.players["team"].eq(team)].sort_values(
+                ["is_key_player", "overall"],
+                ascending=[False, False],
+            )
+            form_rows = self.recent_form[self.recent_form["team"].eq(team)]
+            player_text = ", ".join(
+                f"{row.player_name} ({row.position}, {row.overall})"
+                for row in player_rows.head(5).itertuples()
+            )
+            if form_rows.empty:
+                form_text = "Recent form profile unavailable."
+            else:
+                form = form_rows.iloc[0]
+                form_text = (
+                    f"Last 10: {form.last_10_w}W-{form.last_10_d}D-{form.last_10_l}L, "
+                    f"{form.goals_for_10} scored, {form.goals_against_10} conceded, "
+                    f"{form.clean_sheets_10} clean sheets."
+                )
+            contexts.append(
+                RetrievedDocument(
+                    title=f"{team} structured model context",
+                    source="seed_structured_data",
+                    text=f"{form_text} Selected player attributes: {player_text}.",
+                )
+            )
+        return contexts
 
     def _retrieve_from_pinecone(
         self,

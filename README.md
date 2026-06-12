@@ -16,7 +16,7 @@ The RAG layer then explains the prediction using match context from Pinecone and
 - FastAPI backend with `/predict`, `/teams`, `/fixtures`, and `/health`.
 - Streamlit frontend for selecting fixtures and running scenario analysis.
 - Seed real-world-style data tables for fixtures, rankings, players, historical results,
-  and RAG documents.
+  recent team form, selected players, and RAG documents.
 - ML expected-goals model with a robust fallback if the training sample is small.
 - Poisson probability engine for top scorelines and match outcome probabilities.
 - Pinecone/OpenAI hooks that activate when keys are available.
@@ -69,3 +69,13 @@ For a realistic final project, replace or augment them with:
 - expected lineups, injuries, suspensions, and tactical previews
 
 Use `docs/data_sources.md` as the checklist for what should come from the outside world.
+
+## Current Seed Coverage
+
+- 72 World Cup 2026 group-stage fixtures.
+- 48 team ranking/form profiles.
+- 144 selected player profiles, three per team.
+
+The selected-player table uses EAFC-style attribute columns. It is intentionally marked as
+curated seed data, not an official complete EA database export. If you obtain a legal EAFC CSV,
+replace `data/seed/players.csv` with the same column schema.
