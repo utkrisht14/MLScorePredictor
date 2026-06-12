@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import pandas as pd
 import streamlit as st
+import altair as alt
 
 from mlscorepredictor.data.loaders import DataCatalog
 from mlscorepredictor.modeling.evaluation import (
@@ -163,8 +164,21 @@ with match_tab:
                     {"Scoreline": item.scoreline, "Probability": item.probability}
                     for item in prediction.top_scorelines
                 ]
+            ).sort_values("Probability", ascending=False)
+            scoreline_chart = (
+                alt.Chart(scoreline_frame)
+                .mark_bar(color="#7ec0ee")
+                .encode(
+                    x=alt.X("Probability:Q", title="Probability"),
+                    y=alt.Y("Scoreline:N", sort="-x", title="Scoreline"),
+                    tooltip=[
+                        alt.Tooltip("Scoreline:N"),
+                        alt.Tooltip("Probability:Q", format=".1%"),
+                    ],
+                )
+                .properties(height=240)
             )
-            st.bar_chart(scoreline_frame, x="Scoreline", y="Probability")
+            st.altair_chart(scoreline_chart, use_container_width=True)
             st.dataframe(
                 scoreline_frame.assign(Probability=lambda frame: frame["Probability"].map("{:.1%}".format)),
                 hide_index=True,
@@ -300,4 +314,3 @@ with evaluation_tab:
         "This is a demo backtest on the included seed history. "
         "A larger free historical dataset will make these metrics more meaningful."
     )
-
