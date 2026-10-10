@@ -50,16 +50,6 @@ Start the Streamlit app:
 streamlit run app/streamlit_app.py
 ```
 
-## Secrets
-
-Do not commit real API keys. Use `.env`:
-
-```text
-OPENAI_API_KEY=...
-PINECONE_API_KEY=...
-PINECONE_INDEX_NAME=football-rag
-```
-
 ## Data Strategy
 
 The seed files in `data/seed` are intentionally small so the app runs immediately.
